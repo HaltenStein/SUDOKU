@@ -6,7 +6,7 @@ from random import choice
 KEY = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9], dtype=np.int8)
 
 
-def borders_square_x(x: int, y: int):
+def borders_square_x(x: int, y: int) -> list[int, int, int, int]:
     """Returns the extreme points of 3x3 squares"""
     if x < 3:
         Xstart = 0
@@ -30,7 +30,7 @@ def borders_square_x(x: int, y: int):
     return Xstart, Xend, Ystart, Yend
 
 
-def num_in_square(x: int, y: int , field: np.array):
+def num_in_square(x: int, y: int , field: np.array) -> list[int]:
     """Finding known values in a 3x3 square"""
     Xstart, Xend, Ystart, Yend = borders_square_x(x, y)
     all_varinat_in_sq = []
